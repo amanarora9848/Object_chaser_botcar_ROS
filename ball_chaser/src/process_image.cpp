@@ -44,7 +44,7 @@ class ProcessImage
         bool is_object_in_view;
         int found;
 				
-		// Traverse through all pixels and find if there's a white object.
+	// Traverse through all pixels and find if there's a white object.
         for (int i = 0; i < img.height * img.step; i++)
         {
             if (img.data[i] - white_pixel == 0 && 
@@ -94,7 +94,8 @@ int main(int argc, char** argv)
     // Initialize the process_image node and create a handle to it
     ros::init(argc, argv, "process_image");
     ros::NodeHandle n;
-
+    
+    // Instantiate ProcessImage class, and we're done!
     ProcessImage chase_ball = ProcessImage(&n);
 
     // Handle ROS communication events
