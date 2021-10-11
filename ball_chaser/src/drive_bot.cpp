@@ -23,7 +23,7 @@ class DriveBot
     bool handle_drive_request(ball_chaser::DriveToTarget::Request& req,
                               ball_chaser::DriveToTarget::Response& resp)
     {    
-				// This function should publish the requested linear x and angular velocities to the robot wheel joints
+	// This function should publish the requested linear x and angular z velocities to the robot wheel joints
         ROS_INFO("DriveToTarget Request received - linear:%1.2f, angular:%1.2f", (float)req.linear_x, (float)req.angular_z);
         
         // Create a motor_command object of type geometry_msgs::Twist
@@ -52,7 +52,7 @@ int main(int argc, char** argv)
     // Create a ROS NodeHandle object
     ros::NodeHandle n;
 
-    // Instantiate the DriveBot class and do the deed! CleanCodeRocks!
+    // Instantiate the DriveBot class and do the deed!
     DriveBot drive_it = DriveBot(&n);
 
     // Handle ROS communication events
