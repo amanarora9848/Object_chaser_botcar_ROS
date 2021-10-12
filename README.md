@@ -55,7 +55,7 @@ $ catkin_init_workspace
 ```bash
 $ git clone https://github.com/amanarora9848/Object_chaser_botcar_ROS.git
 ```
-#### The 'chaser' ROS nodes have been written for you in the ball_chaser/src directory. 
+#### The 'chaser' ROS nodes have been written for you in the `ball_chaser/src` directory. 
 
 The `drive_bot` node will provide a service to drive robot around, and the service server publishes messages containing velocities for wheel joints.
 
