@@ -44,16 +44,16 @@ $ sudo apt update && sudo apt upgrade
 
 #### First, we need to build a catkin workspace for the project. Navigate to your preferred directory, then:
 ```bash
-$ mkdir -p ocbr_catkin_workspace/src/
-$ cd ocbr_catkin_workspace/src/
+mkdir -p ocbr_catkin_workspace/src/
+cd ocbr_catkin_workspace/src/
 ```
 #### Time to initialize the catkin workspace:
 ```bash
-$ catkin_init_workspace
+catkin_init_workspace
 ```
 #### Now clone this repo:
 ```bash
-$ git clone https://github.com/amanarora9848/Object_chaser_botcar_ROS.git
+git clone https://github.com/amanarora9848/Object_chaser_botcar_ROS.git
 ```
 #### The 'chaser' ROS nodes have been written for you in the `ball_chaser/src` directory. 
 
@@ -65,23 +65,23 @@ The `process_image` node subscibes to robot's camera images, finds our desired o
 
 #### Here, run `catkin_make` to build the package:
 ```bash
-$ catkin_make
+catkin_make
 ```
 #### Now, do:
 ```bash
-$ source devel/setup.bash
+source devel/setup.bash
 ```
 
 #### In this terminal, let's launch our robot inside our strange Gazebo world. The launch file for this can be found in `/src/my_robot/launch/world.launch` relative to the current diretory:
 ```bash
-$ roslaunch my_robot world.launch
+roslaunch my_robot world.launch
 ```
 
 It opens up a nice little Gazebo world, with our robot inside it.
 
 #### Now, open a new terminal window, navigate to our `ocbr_catkin_workspace` directory and run our nodes. It makes use of `ball_chaser.launch` file situated inside `/src/ball_chaser/launch/` directory relative to our current one.
 ```bash
-$ source devel/setup.bash
-$ roslaunch ball_chaser ball_chaser.launch
+source devel/setup.bash
+roslaunch ball_chaser ball_chaser.launch
 ```
 #### If everything works fine, you can place the white object in front of our red bot to test its working.
